@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="homepage" class="d-flex bg-dark">
+      <div style="width: 30%">
+        <div style="margin: 1rem">
+          <button class="start btn btn-light btn-block btn-lg">
+            Start New Game
+          </button>
+        </div>
+        <form>
+          <div style="margin: 1rem">
+            <input
+              placeholder="Enter Room-Id"
+              class="form-control-lg"
+              style="width: 100%"
+              type="number"
+              id="roomId"
+              name="roomId"
+            />
+          </div>
+          <div style="margin: 1rem">
+            <button
+              class="btn btn-light btn-block btn-lg"
+              id="submitBtn"
+              type="submit"
+            >
+              Join Game
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="waitScreen" class="d-none flex-column bg-dark">
+      <div style="color: white">
+        <h1>Your room id is <span>?</span></h1>
+      </div>
+      <div style="color: white"><h1>Waiting for other player...</h1></div>
+    </div>
+    <div id="countdownScreen" class="d-none bg-dark">
+      <div style="color: white">
+        <h1>Game starting in <span>10</span></h1>
+      </div>
+    </div>
+    <div id="reloadScreen" class="d-none bg-dark flex-column">
+      <span style="color: white"><h1 id="message"></h1></span>
+      <button class="btn btn-light btn-lg">Homepage</button>
+    </div>
+    <div id="gameScreen" class="d-none flex-column">
+      <span class="m-4"
+        ><h1><span id="whoseTurn">Your</span> Turn</h1></span
+      >
+      <div class="board"></div>
+      <div class="dominoContainer d-flex m-4">
+        <div class="verticalDomino m-4" draggable="true">
+          <div class="dominoSquare" id="verticalUp"></div>
+          <div class="dominoSquare" id="verticalDown"></div>
+        </div>
+        <div class="horizontalDomino m-4" draggable="true">
+          <div class="dominoSquare" id="horizontalLeft"></div>
+          <div class="dominoSquare" id="horizontalRight"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+  <script src="app.js"></script>
+</html>
