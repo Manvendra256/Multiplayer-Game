@@ -26,7 +26,7 @@ document.body.style.setProperty("--squareSide", 50 / noOfRows);
 /* SOCKET IO */
 
 /* Establish the socket connection from the client to the server */
-const socket = io("http://localhost:3000");
+const socket = io("https://sheltered-atoll-77476.herokuapp.com/");
 
 /* Socket Events */
 
