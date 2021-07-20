@@ -1,7 +1,7 @@
 {
-  "name": "game",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "'Two Player Board Game'",
+  "description": "'Multiplayer board game'",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -10,7 +10,6 @@
   "author": "Manvendra",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
     "socket.io": "^4.1.3"
   },
   "devDependencies": {
