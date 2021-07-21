@@ -95,10 +95,16 @@ input {
   background-color: var(--squareColorAfter, black);
 }
 
+.dominoContainer {
+  justify-content: center;
+  align-items: center;
+}
+
 .dominoSquare {
   height: calc(1vmin * var(--squareSide, 1));
   width: calc(1vmin * var(--squareSide, 1));
 }
+
 .horizontalDomino {
   transform: translate(
     0,
@@ -110,6 +116,7 @@ input {
   width: calc(1vmin * 2 * var(--squareSide, 1));
   border-radius: calc(1vmin * var(--squareSide, 1));
 }
+
 .verticalDomino {
   transform: translate(
     0,
